@@ -99,69 +99,69 @@ function initLeadForm() {
         <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
         <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
       </svg>
-      Sending to admin@bananatech.in...
+      Sending inquiry...
     `;
 
     try {
-      const response = await fetch('https://formsubmit.co/ajax/admin@bananatech.in', {
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
         body: JSON.stringify({
+          access_key: 'a82ff7c6-55b6-4ef8-8dc8-87c9f1a583c3',
+          subject: `New Lead: ${name} (${service}) - BananaTech`,
+          from_name: 'BananaTech Website',
           name: name,
           email: email,
           phone: phone,
-          project_type: service,
-          project_brief: notes,
-          _subject: `New Lead from BananaTech.in: ${name} (${service})`,
-          _template: 'table',
-          _captcha: 'false'
+          service_requested: service,
+          message: notes
         })
       });
 
       const data = await response.json();
 
-      if (response.ok && (data.success === 'true' || data.success === true || data.message)) {
+      if (response.ok && (data.success === true || data.success === 'true')) {
         form.reset();
 
         if (feedbackMsg) {
           feedbackMsg.innerHTML = `
             <i data-lucide="check-circle" class="w-4 h-4 flex-shrink-0 text-emerald-400"></i>
-            <span>Thank you, <strong>${name}</strong>! Your inquiry has been emailed to <strong>admin@bananatech.in</strong>. We'll be in touch shortly.</span>
+            <span>Thank you, <strong>${name}</strong>! Your inquiry has been sent to our team. We'll be in touch shortly.</span>
           `;
           feedbackMsg.classList.remove('hidden');
           feedbackMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
           if (window.lucide) lucide.createIcons();
         }
 
-        showToast(`Inquiry emailed to admin@bananatech.in!`, 'success');
+        showToast(`Inquiry sent successfully! We will contact you soon.`, 'success');
 
         // Optional WhatsApp fast-track
         const waText = `Hi BananaTech Team! 👋 I just submitted a project brief on bananatech.in:\n\n• Name: ${name}\n• Service: ${service}\n• Phone: ${phone}\n• Brief: ${notes}`;
         const waUrl = `https://wa.me/917995332333?text=${encodeURIComponent(waText)}`;
         
         setTimeout(() => {
-          if (confirm("Inquiry sent to admin@bananatech.in! Would you also like to start a direct chat on WhatsApp?")) {
+          if (confirm("Inquiry sent successfully! Would you also like to start a direct chat on WhatsApp?")) {
             window.open(waUrl, '_blank');
           }
         }, 500);
       } else {
-        throw new Error(data.message || 'Form dispatch error');
+        throw new Error(data.message || 'Web3Forms dispatch error');
       }
     } catch (err) {
-      console.warn('FormSubmit dispatch notice:', err);
-      // Fallback
+      console.warn('Web3Forms dispatch error, routing to fallback:', err);
+      // Fallback: Ensure lead is never lost
       if (feedbackMsg) {
         feedbackMsg.innerHTML = `
           <i data-lucide="check-circle" class="w-4 h-4 flex-shrink-0 text-emerald-400"></i>
-          <span>Inquiry received! We are also connecting you with our direct WhatsApp desk.</span>
+          <span>Inquiry received! Connecting you with our direct WhatsApp desk...</span>
         `;
         feedbackMsg.classList.remove('hidden');
         if (window.lucide) lucide.createIcons();
       }
-      showToast(`Inquiry captured! Connecting to WhatsApp...`, 'success');
+      showToast(`Connecting to WhatsApp desk...`, 'info');
       const waText = `Hi BananaTech! 👋 Project inquiry from ${name} (${email}): ${service}. Notes: ${notes}`;
       window.open(`https://wa.me/917995332333?text=${encodeURIComponent(waText)}`, '_blank');
       form.reset();
