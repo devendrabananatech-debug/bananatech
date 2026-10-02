@@ -1,6 +1,6 @@
 # Cloudflare Pages Redirects
 /home                /                     301
-/services            /services.html        301
-/portfolio           /portfolio.html       301
-/about               /about.html           301
-/contact             /contact.html         301
+/portfolio           /                     301
+/services            /#services            301
+/about               /#why-us              301
+/contact             /#contact             301
