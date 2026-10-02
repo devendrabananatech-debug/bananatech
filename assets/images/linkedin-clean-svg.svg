@@ -1,49 +1,40 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800" fill="none">
   <defs>
-    <!-- Background Gradient -->
-    <radialGradient id="cleanBg" cx="50%" cy="50%" r="70%">
+    <radialGradient id="cleanPureBg" cx="50%" cy="50%" r="70%">
       <stop offset="0%" stop-color="#0F172A" />
       <stop offset="60%" stop-color="#070A11" />
-      <stop offset="100%" stop-color="#030508" />
+      <stop offset="100%" stop-color="#020408" />
     </radialGradient>
 
-    <!-- Banana Gold Gradient -->
-    <linearGradient id="bananaGradClean" x1="15%" y1="10%" x2="85%" y2="90%">
+    <linearGradient id="bananaPure" x1="15%" y1="10%" x2="85%" y2="90%">
       <stop offset="0%" stop-color="#FEF08A" />
       <stop offset="35%" stop-color="#FACC15" />
       <stop offset="70%" stop-color="#EAB308" />
       <stop offset="100%" stop-color="#CA8A04" />
     </linearGradient>
 
-    <!-- Cyan Electric Gradient -->
-    <linearGradient id="cyanGradClean" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="cyanPure" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#E0F2FE" />
       <stop offset="50%" stop-color="#38BDF8" />
       <stop offset="100%" stop-color="#0284C7" />
     </linearGradient>
   </defs>
 
-  <!-- Seamless Solid Background (Zero Borders, Zero Boxes) -->
-  <rect width="800" height="800" fill="url(#cleanBg)" />
+  <!-- Clean Solid Dark Background -->
+  <rect width="800" height="800" fill="url(#cleanPureBg)" />
 
-  <!-- Central Emblem Container -->
-  <g transform="translate(400, 350) scale(7.5)">
-    
-    <!-- Outer Orbit Ring (Dashed Tech Circle) -->
-    <circle cx="0" cy="0" r="32" stroke="url(#bananaGradClean)" stroke-width="1.2" stroke-dasharray="4 4" opacity="0.3" />
-    <circle cx="0" cy="0" r="25" fill="#090D16" stroke="#1E293B" stroke-width="1.2" />
-
-    <!-- Stylized Banana Crescent (Clean Vector - No Bounding Box Filter) -->
+  <!-- Central Symbol (Pure Mark - No Rings, No Boxes, No Frames) -->
+  <g transform="translate(400, 360) scale(10)">
     <g transform="translate(-24, -24)">
       <path d="M 16 12 C 28 14 34 26 28 36 C 26 39 23 41 21 41 C 20 41 21 38 23 35 C 27 28 22 18 13 15 C 11.5 14.5 13 12 16 12 Z" 
-            fill="url(#bananaGradClean)" />
+            fill="url(#bananaPure)" />
       
       <!-- Cyan Cyber Node & Data Line -->
-      <path d="M 28 18 L 35 12" stroke="url(#cyanGradClean)" stroke-width="1.8" stroke-linecap="round" />
-      <circle cx="28" cy="18" r="3.2" fill="url(#cyanGradClean)" />
+      <path d="M 28 18 L 35 12" stroke="url(#cyanPure)" stroke-width="1.8" stroke-linecap="round" />
+      <circle cx="28" cy="18" r="3.2" fill="url(#cyanPure)" />
       <circle cx="35" cy="12" r="1.8" fill="#FFFFFF" />
 
-      <!-- Internal Pulse Core Dot -->
+      <!-- Pulse Dot -->
       <circle cx="21" cy="26" r="2" fill="#FFFFFF" opacity="0.95" />
     </g>
   </g>
