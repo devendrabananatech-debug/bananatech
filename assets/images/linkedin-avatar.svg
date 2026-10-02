@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800" fill="none">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGlow" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#111827" />
+      <stop offset="60%" stop-color="#070A11" />
+      <stop offset="100%" stop-color="#030508" />
+    </radialGradient>
+
+    <!-- Banana Gold Gradient -->
+    <linearGradient id="bananaGradLg" x1="15%" y1="10%" x2="85%" y2="90%">
+      <stop offset="0%" stop-color="#FEF08A" />
+      <stop offset="35%" stop-color="#FACC15" />
+      <stop offset="70%" stop-color="#EAB308" />
+      <stop offset="100%" stop-color="#CA8A04" />
+    </linearGradient>
+
+    <!-- Cyan Electric Gradient -->
+    <linearGradient id="cyanGradLg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E0F2FE" />
+      <stop offset="50%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+
+    <!-- Drop Shadow / Glow Filters -->
+    <filter id="glowYellow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="16" result="blur1" />
+      <feComposite in="SourceGraphic" in2="blur1" operator="over" />
+    </filter>
+
+    <filter id="glowCyan" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="12" result="blur2" />
+      <feComposite in="SourceGraphic" in2="blur2" operator="over" />
+    </filter>
+
+    <filter id="subtleShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000000" flood-opacity="0.65" />
+    </filter>
+  </defs>
+
+  <!-- Solid Obsidian Dark Background -->
+  <rect width="800" height="800" rx="0" fill="url(#bgGlow)" />
+
+  <!-- Subtle Border Rim -->
+  <rect x="16" y="16" width="768" height="768" rx="48" fill="none" stroke="#FACC15" stroke-opacity="0.12" stroke-width="2" />
+  <rect x="24" y="24" width="752" height="752" rx="40" fill="none" stroke="#38BDF8" stroke-opacity="0.06" stroke-width="1.5" />
+
+  <!-- Ambient Glow Behind Symbol -->
+  <circle cx="400" cy="370" r="220" fill="#FACC15" opacity="0.06" filter="blur(60px)" />
+  <circle cx="460" cy="320" r="140" fill="#38BDF8" opacity="0.08" filter="blur(40px)" />
+
+  <!-- Central Emblem Container -->
+  <g transform="translate(400, 360) scale(7.2)" filter="url(#subtleShadow)">
+    
+    <!-- Outer Orbit Ring (Dashed Tech Circle) -->
+    <circle cx="0" cy="0" r="32" stroke="url(#bananaGradLg)" stroke-width="1.2" stroke-dasharray="4 4" opacity="0.32" />
+    <circle cx="0" cy="0" r="25" fill="#090D16" stroke="#1E293B" stroke-width="1.2" />
+
+    <!-- Stylized Banana Crescent -->
+    <g transform="translate(-24, -24)">
+      <path d="M 16 12 C 28 14 34 26 28 36 C 26 39 23 41 21 41 C 20 41 21 38 23 35 C 27 28 22 18 13 15 C 11.5 14.5 13 12 16 12 Z" 
+            fill="url(#bananaGradLg)" filter="url(#glowYellow)"/>
+      
+      <!-- Cyan Cyber Node & Data Line -->
+      <path d="M 28 18 L 35 12" stroke="url(#cyanGradLg)" stroke-width="1.8" stroke-linecap="round" />
+      <circle cx="28" cy="18" r="3.2" fill="url(#cyanGradLg)" filter="url(#glowCyan)" />
+      <circle cx="35" cy="12" r="1.8" fill="#FFFFFF" />
+
+      <!-- Internal Pulse Core Dot -->
+      <circle cx="21" cy="26" r="2" fill="#FFFFFF" opacity="0.9" />
+    </g>
+  </g>
+
+  <!-- Typography Brand Mark Below Emblem -->
+  <text x="400" y="660" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="52" font-weight="900" letter-spacing="-1" fill="#FFFFFF">
+    BANANA<tspan fill="#FACC15">TECH</tspan><tspan fill="#38BDF8">.</tspan>
+  </text>
+  <text x="400" y="705" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" letter-spacing="6" fill="#94A3B8">
+    DIGITAL PRODUCT STUDIO
+  </text>
+</svg>
