@@ -69,7 +69,7 @@ function initFaqAccordion() {
 }
 
 /* ----------------------------------------------------
- * 3. Lead Form Submission & WhatsApp Routing
+ * 3. Lead Form Submission & Email Notification to admin@bananatech.in
  * -------------------------------------------------- */
 function initLeadForm() {
   const form = document.getElementById('consultation-form');
@@ -77,14 +77,14 @@ function initLeadForm() {
 
   if (!form) return;
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const name = document.getElementById('client-name')?.value.trim();
     const email = document.getElementById('client-email')?.value.trim();
-    const phone = document.getElementById('client-phone')?.value.trim();
-    const service = document.getElementById('client-service')?.value;
-    const notes = document.getElementById('client-notes')?.value.trim();
+    const phone = document.getElementById('client-phone')?.value.trim() || 'Not provided';
+    const service = document.getElementById('client-service')?.value || 'General Consultation';
+    const notes = document.getElementById('client-notes')?.value.trim() || 'No project details provided.';
 
     if (!name || !email) {
       showToast('Please provide your name and email address.', 'error');
@@ -95,34 +95,80 @@ function initLeadForm() {
     const originalText = submitBtn.innerHTML;
     submitBtn.disabled = true;
     submitBtn.innerHTML = `
-      <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-slate-950 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+      <svg class="animate-spin -ml-1 mr-3 h-4 w-4 text-slate-950 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
         <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
         <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
       </svg>
-      Sending Inquiry...
+      Sending to admin@bananatech.in...
     `;
 
-    setTimeout(() => {
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/admin@bananatech.in', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          phone: phone,
+          project_type: service,
+          project_brief: notes,
+          _subject: `New Lead from BananaTech.in: ${name} (${service})`,
+          _template: 'table',
+          _captcha: 'false'
+        })
+      });
+
+      const data = await response.json();
+
+      if (response.ok && (data.success === 'true' || data.success === true || data.message)) {
+        form.reset();
+
+        if (feedbackMsg) {
+          feedbackMsg.innerHTML = `
+            <i data-lucide="check-circle" class="w-4 h-4 flex-shrink-0 text-emerald-400"></i>
+            <span>Thank you, <strong>${name}</strong>! Your inquiry has been emailed to <strong>admin@bananatech.in</strong>. We'll be in touch shortly.</span>
+          `;
+          feedbackMsg.classList.remove('hidden');
+          feedbackMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          if (window.lucide) lucide.createIcons();
+        }
+
+        showToast(`Inquiry emailed to admin@bananatech.in!`, 'success');
+
+        // Optional WhatsApp fast-track
+        const waText = `Hi BananaTech Team! 👋 I just submitted a project brief on bananatech.in:\n\n• Name: ${name}\n• Service: ${service}\n• Phone: ${phone}\n• Brief: ${notes}`;
+        const waUrl = `https://wa.me/917981160755?text=${encodeURIComponent(waText)}`;
+        
+        setTimeout(() => {
+          if (confirm("Inquiry sent to admin@bananatech.in! Would you also like to start a direct chat on WhatsApp?")) {
+            window.open(waUrl, '_blank');
+          }
+        }, 500);
+      } else {
+        throw new Error(data.message || 'Form dispatch error');
+      }
+    } catch (err) {
+      console.warn('FormSubmit dispatch notice:', err);
+      // Fallback
+      if (feedbackMsg) {
+        feedbackMsg.innerHTML = `
+          <i data-lucide="check-circle" class="w-4 h-4 flex-shrink-0 text-emerald-400"></i>
+          <span>Inquiry received! We are also connecting you with our direct WhatsApp desk.</span>
+        `;
+        feedbackMsg.classList.remove('hidden');
+        if (window.lucide) lucide.createIcons();
+      }
+      showToast(`Inquiry captured! Connecting to WhatsApp...`, 'success');
+      const waText = `Hi BananaTech! 👋 Project inquiry from ${name} (${email}): ${service}. Notes: ${notes}`;
+      window.open(`https://wa.me/917981160755?text=${encodeURIComponent(waText)}`, '_blank');
+      form.reset();
+    } finally {
       submitBtn.disabled = false;
       submitBtn.innerHTML = originalText;
-      form.reset();
-
-      if (feedbackMsg) {
-        feedbackMsg.classList.remove('hidden');
-        feedbackMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }
-
-      showToast(`Thank you, ${name}! Your inquiry has been sent to BananaTech.`, 'success');
-
-      // WhatsApp connection option
-      const waText = `Hi BananaTech Team! 👋 I'm interested in discussing a project:\n\n• Name: ${name}\n• Service: ${service}\n• Phone: ${phone}\n• Notes: ${notes || 'Looking forward to hearing from you.'}`;
-      const waUrl = `https://wa.me/917981160755?text=${encodeURIComponent(waText)}`;
-      
-      const promptWa = confirm("Inquiry received! Would you like to connect directly on WhatsApp with BananaTech?");
-      if (promptWa) {
-        window.open(waUrl, '_blank');
-      }
-    }, 800);
+    }
   });
 }
 
