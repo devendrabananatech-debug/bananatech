@@ -140,7 +140,7 @@ function initLeadForm() {
 
         // Optional WhatsApp fast-track
         const waText = `Hi BananaTech Team! 👋 I just submitted a project brief on bananatech.in:\n\n• Name: ${name}\n• Service: ${service}\n• Phone: ${phone}\n• Brief: ${notes}`;
-        const waUrl = `https://wa.me/917981160755?text=${encodeURIComponent(waText)}`;
+        const waUrl = `https://wa.me/917995332333?text=${encodeURIComponent(waText)}`;
         
         setTimeout(() => {
           if (confirm("Inquiry sent to admin@bananatech.in! Would you also like to start a direct chat on WhatsApp?")) {
@@ -163,7 +163,7 @@ function initLeadForm() {
       }
       showToast(`Inquiry captured! Connecting to WhatsApp...`, 'success');
       const waText = `Hi BananaTech! 👋 Project inquiry from ${name} (${email}): ${service}. Notes: ${notes}`;
-      window.open(`https://wa.me/917981160755?text=${encodeURIComponent(waText)}`, '_blank');
+      window.open(`https://wa.me/917995332333?text=${encodeURIComponent(waText)}`, '_blank');
       form.reset();
     } finally {
       submitBtn.disabled = false;
