@@ -1,5 +1,5 @@
 /**
- * BananaTech.in - Minimalist Agency Controller
+ * BananaTech.in - Minimalist Controller
  */
 
 document.addEventListener('DOMContentLoaded', () => {
