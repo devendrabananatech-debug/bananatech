@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | BananaTech — Modern Digital Product &amp; Website Studio</title>
+  <meta name="description" content="Learn about BananaTech (bananatech.in): Our engineering philosophy, mission, and why fast-growing hospitals, restaurants, and startups choose us.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            banana: { 400: '#FACC15', 500: '#EAB308' },
+            cyanAccent: '#38BDF8',
+            emeraldAccent: '#10B981',
+          },
+          fontFamily: {
+            heading: ['Outfit', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-[#070A11] text-slate-100 selection:bg-banana-400 selection:text-slate-950 font-sans antialiased">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 backdrop-blur-xl bg-[#070A11]/85 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center">
+        <img src="assets/images/logo.svg" alt="BananaTech" class="h-10 w-auto">
+      </a>
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+        <a href="index.html" class="hover:text-banana-400 transition-colors">Home</a>
+        <a href="services.html" class="hover:text-banana-400 transition-colors">Services</a>
+        <a href="portfolio.html" class="hover:text-banana-400 transition-colors">Case Studies</a>
+        <a href="index.html#calculator" class="hover:text-banana-400 transition-colors">Cost Estimator</a>
+        <a href="about.html" class="text-banana-400 font-semibold transition-colors">About Us</a>
+        <a href="contact.html" class="hover:text-banana-400 transition-colors">Contact</a>
+      </nav>
+      <div class="flex items-center space-x-4">
+        <a href="contact.html" class="px-5 py-2.5 rounded-lg bg-gradient-to-r from-banana-400 to-amber-500 text-slate-950 font-bold text-xs uppercase tracking-wider hover:shadow-lg hover:shadow-banana-400/25 transition-all">
+          Work With Us
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="py-20 relative bg-radial-hero cyber-grid border-b border-white/5 text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <span class="px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-banana-400/10 text-banana-400 border border-banana-400/20">
+        Who We Are
+      </span>
+      <h1 class="mt-4 text-4xl sm:text-6xl font-extrabold font-heading text-white">
+        We Unpeel Digital Complexity.
+      </h1>
+      <p class="mt-4 text-slate-300 text-base sm:text-lg max-w-2xl mx-auto">
+        BananaTech was founded on a simple conviction: technology shouldn’t be bloated, fragile, or slow. We build clean, high-performance engines that fuel business dominance.
+      </p>
+    </div>
+  </section>
+
+  <!-- Story & Philosophy -->
+  <section class="py-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <div class="space-y-4">
+        <span class="text-xs font-mono text-banana-400 uppercase tracking-widest font-bold">The BananaTech Story</span>
+        <h2 class="text-3xl font-bold font-heading text-white">Why "BananaTech"?</h2>
+        <p class="text-slate-300 text-sm leading-relaxed">
+          Like a banana, great software should be organic, energizing, universally accessible, and protected by a seamless outer layer with zero fluff inside.
+        </p>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          Most traditional agencies hand clients cumbersome WordPress installs with dozens of plugins that crash, slow down phones, and cost thousands in recurring server bills. We take the modern approach: static edge computing on Cloudflare, lightning-fast APIs, and modern responsive design.
+        </p>
+      </div>
+
+      <div class="glass-panel p-8 rounded-3xl border border-banana-400/30 space-y-4">
+        <div class="text-2xl font-bold font-heading text-white mb-2">Our Operating Commitments</div>
+        <div class="space-y-3 text-xs text-slate-300">
+          <div class="flex items-center space-x-3">
+            <span class="text-banana-400 font-bold">⚡</span>
+            <span><strong>Cloudflare Edge First:</strong> 0₹ server costs &amp; sub-50ms latency globally.</span>
+          </div>
+          <div class="flex items-center space-x-3">
+            <span class="text-banana-400 font-bold">🚀</span>
+            <span><strong>3-4 Week Sprints:</strong> We ship working software fast, not empty promises.</span>
+          </div>
+          <div class="flex items-center space-x-3">
+            <span class="text-banana-400 font-bold">🛡️</span>
+            <span><strong>100% Code Ownership:</strong> Your code belongs to you. Zero proprietary lock-in.</span>
+          </div>
+          <div class="flex items-center space-x-3">
+            <span class="text-banana-400 font-bold">📈</span>
+            <span><strong>Conversion Focus:</strong> Designed for patient bookings, food orders, and authority.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#05070D] border-t border-white/10 py-12 text-slate-400 text-xs text-center">
+    <div class="max-w-7xl mx-auto px-4">
+      <p>&copy; 2026 BananaTech (bananatech.in). All rights reserved. Hosted on Cloudflare Pages.</p>
+    </div>
+  </footer>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

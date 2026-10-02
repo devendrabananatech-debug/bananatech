@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | BananaTech — Hospital Portals, Restaurant Tech, Executive Profiling & Mobile Apps</title>
+  <meta name="description" content="In-depth breakdown of BananaTech's services: Hospital websites, Restaurant QR ordering, VIP executive profiling, SaaS product studio, and iOS/Android mobile apps.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            banana: { 400: '#FACC15', 500: '#EAB308' },
+            cyanAccent: '#38BDF8',
+            emeraldAccent: '#10B981',
+          },
+          fontFamily: {
+            heading: ['Outfit', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-[#070A11] text-slate-100 selection:bg-banana-400 selection:text-slate-950 font-sans antialiased">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 backdrop-blur-xl bg-[#070A11]/85 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center">
+        <img src="assets/images/logo.svg" alt="BananaTech" class="h-10 w-auto">
+      </a>
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+        <a href="index.html" class="hover:text-banana-400 transition-colors">Home</a>
+        <a href="services.html" class="text-banana-400 font-semibold transition-colors">Services</a>
+        <a href="portfolio.html" class="hover:text-banana-400 transition-colors">Case Studies</a>
+        <a href="index.html#calculator" class="hover:text-banana-400 transition-colors">Cost Estimator</a>
+        <a href="about.html" class="hover:text-banana-400 transition-colors">About Us</a>
+        <a href="contact.html" class="hover:text-banana-400 transition-colors">Contact</a>
+      </nav>
+      <div class="flex items-center space-x-4">
+        <a href="contact.html" class="px-5 py-2.5 rounded-lg bg-gradient-to-r from-banana-400 to-amber-500 text-slate-950 font-bold text-xs uppercase tracking-wider hover:shadow-lg hover:shadow-banana-400/25 transition-all">
+          Start Project
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="py-20 relative bg-radial-hero cyber-grid border-b border-white/5">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <span class="px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-banana-400/10 text-banana-400 border border-banana-400/20">
+        End-to-End Digital Engineering
+      </span>
+      <h1 class="mt-4 text-4xl sm:text-6xl font-extrabold font-heading text-white">
+        Specialized Services Engineered for Real Growth
+      </h1>
+      <p class="mt-4 text-slate-300 text-base sm:text-lg max-w-3xl mx-auto">
+        We do not build generic landing pages. We engineer mission-critical digital systems tailored for hospitals, restaurant chains, visionary executives, and tech product creators.
+      </p>
+    </div>
+  </section>
+
+  <!-- Deep Dive Service Sections -->
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-24">
+    
+    <!-- Service 1: Hospital & Healthcare -->
+    <div id="hospitals" class="glass-panel p-8 sm:p-12 rounded-3xl border border-emerald-500/30 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7 space-y-4">
+          <div class="inline-flex items-center space-x-2 px-3 py-1 rounded bg-emerald-500/10 text-emerald-400 text-xs font-bold border border-emerald-500/20">
+            <i data-lucide="shield" class="w-3.5 h-3.5"></i>
+            <span>NABH &amp; HIPAA Compliance Ready</span>
+          </div>
+          <h2 class="text-3xl font-extrabold font-heading text-white">1. Hospital &amp; Healthcare Portals</h2>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            In healthcare, digital infrastructure directly influences patient trust, appointment conversions, and operational efficiency. We develop lightning-fast web systems for multi-specialty hospitals, diagnostic clinics, and individual practitioner centers.
+          </p>
+          <div class="space-y-3 pt-2">
+            <h4 class="text-xs font-mono uppercase tracking-wider text-banana-400">Core Deliverables &amp; Features:</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-300">
+              <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+                <strong class="text-white block mb-1">Doctor Directory &amp; OPD Booking</strong>
+                Instant slot selection with doctor specialty search and automated calendar sync.
+              </div>
+              <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+                <strong class="text-white block mb-1">WhatsApp &amp; SMS Integration</strong>
+                Real-time token alerts and appointment confirmations reducing patient no-shows.
+              </div>
+              <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+                <strong class="text-white block mb-1">EHR &amp; Lab Report Download</strong>
+                Secure passcode-authenticated portal for downloading blood, radiology, and pathology reports.
+              </div>
+              <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+                <strong class="text-white block mb-1">Emergency SOS &amp; Bed Availability</strong>
+                1-tap ambulance dispatch hotline and live intensive care bed availability widget.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-5 bg-slate-950 p-6 rounded-2xl border border-slate-800 space-y-4">
+          <h4 class="text-xs font-mono text-emerald-400 font-bold uppercase">Deployment Architecture</h4>
+          <ul class="text-xs space-y-2 text-slate-400 font-mono">
+            <li>• Cloudflare Pages Edge (0₹ Hosting)</li>
+            <li>• Automated Free SSL Certificate</li>
+            <li>• Encrypted Storage for Medical PDF Assets</li>
+            <li>• 99.99% Guaranteed High-Availability</li>
+          </ul>
+          <div class="pt-4 border-t border-slate-800">
+            <a href="contact.html?service=hospital" class="w-full py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs uppercase tracking-wider flex items-center justify-center space-x-2 transition-all">
+              <span>Book Hospital Tech Consultation</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service 2: Restaurant & Dining Tech -->
+    <div id="restaurants" class="glass-panel p-8 sm:p-12 rounded-3xl border border-amber-400/30 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7 space-y-4">
+          <div class="inline-flex items-center space-x-2 px-3 py-1 rounded bg-amber-500/10 text-amber-400 text-xs font-bold border border-amber-500/20">
+            <i data-lucide="utensils" class="w-3.5 h-3.5"></i>
+            <span>0% Third-Party Platform Commission</span>
+          </div>
+          <h2 class="text-3xl font-extrabold font-heading text-white">2. Restaurants &amp; FoodTech Systems</h2>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Stop giving away 25% to 30% of your hard-earned revenue to food aggregator platforms. BananaTech equips your restaurant or cloud kitchen with proprietary direct-ordering technology.
+          </p>
+          <div class="space-y-3 pt-2">
+            <h4 class="text-xs font-mono uppercase tracking-wider text-banana-400">Core Deliverables &amp; Features:</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-300">
+              <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+                <strong class="text-white block mb-1">Instant QR Table Ordering</strong>
+                Diners scan a table QR code and view photos, customize spice levels, and order directly.
+              </div>
+              <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+                <strong class="text-white block mb-1">Direct Delivery &amp; UPI Checkout</strong>
+                Customers order directly on your domain with Google Pay, PhonePe, Paytm, or Credit Card.
+              </div>
+              <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+                <strong class="text-white block mb-1">Thermal KDS &amp; POS Integration</strong>
+                Orders automatically print to your kitchen or bar ticket printer instantly.
+              </div>
+              <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+                <strong class="text-white block mb-1">Customer CRM &amp; Loyalty</strong>
+                Capture guest phone numbers to drive automated birthday offers and repeat orders.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-5 bg-slate-950 p-6 rounded-2xl border border-slate-800 space-y-4">
+          <h4 class="text-xs font-mono text-amber-400 font-bold uppercase">ROI Metric</h4>
+          <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+            <p class="text-2xl font-black text-amber-400 font-heading">₹1,80,000+</p>
+            <p class="text-xs text-slate-400 mt-1">Average monthly commission saved by restaurants using BananaTech direct ordering.</p>
+          </div>
+          <div class="pt-4 border-t border-slate-800">
+            <a href="contact.html?service=restaurant" class="w-full py-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-xs uppercase tracking-wider flex items-center justify-center space-x-2 transition-all">
+              <span>Launch Restaurant Portal</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service 3: Executive & Corporate Profiling -->
+    <div id="profiling" class="glass-panel p-8 sm:p-12 rounded-3xl border border-purple-500/30 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7 space-y-4">
+          <div class="inline-flex items-center space-x-2 px-3 py-1 rounded bg-purple-500/10 text-purple-400 text-xs font-bold border border-purple-500/20">
+            <i data-lucide="award" class="w-3.5 h-3.5"></i>
+            <span>Executive Authority &amp; Media Kit</span>
+          </div>
+          <h2 class="text-3xl font-extrabold font-heading text-white">3. Executive &amp; Corporate Profiling</h2>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Your personal digital presence is your most valuable asset when closing high-ticket deals, raising venture capital, or securing high-profile keynote invites. We create bespoke digital profiles that establish undeniable authority.
+          </p>
+          <div class="space-y-3 pt-2">
+            <h4 class="text-xs font-mono uppercase tracking-wider text-banana-400">Core Deliverables &amp; Features:</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-300">
+              <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+                <strong class="text-white block mb-1">Editorial Biography &amp; Achievements</strong>
+                Compelling narrative designed for journalists, conference organizers, and investors.
+              </div>
+              <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+                <strong class="text-white block mb-1">Knowledge Graph &amp; Wikipedia SEO</strong>
+                Structured schema markup to secure Google Knowledge Graph prominence.
+              </div>
+              <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+                <strong class="text-white block mb-1">Gated Investor &amp; Board Vault</strong>
+                Protected microsite for confidential company decks and financial statements.
+              </div>
+              <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+                <strong class="text-white block mb-1">Media Kit &amp; High-Res Assets</strong>
+                One-click press photo download, official bios (50, 100, 250 words), and speaking topics.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-5 bg-slate-950 p-6 rounded-2xl border border-slate-800 space-y-4">
+          <h4 class="text-xs font-mono text-purple-400 font-bold uppercase">Target Profiles</h4>
+          <ul class="text-xs space-y-2 text-slate-400 font-mono">
+            <li>• Startup Founders &amp; Co-Founders</li>
+            <li>• Hospital CMOs &amp; Senior Surgeons</li>
+            <li>• C-Suite Executives &amp; Board Directors</li>
+            <li>• Keynote Speakers &amp; Authors</li>
+          </ul>
+          <div class="pt-4 border-t border-slate-800">
+            <a href="contact.html?service=profiling" class="w-full py-3 rounded-xl bg-purple-500 hover:bg-purple-400 text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center space-x-2 transition-all">
+              <span>Create Executive Profile</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service 4: Mobile Applications -->
+    <div id="mobileapps" class="glass-panel p-8 sm:p-12 rounded-3xl border border-sky-500/30 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7 space-y-4">
+          <div class="inline-flex items-center space-x-2 px-3 py-1 rounded bg-sky-500/10 text-sky-400 text-xs font-bold border border-sky-500/20">
+            <i data-lucide="smartphone" class="w-3.5 h-3.5"></i>
+            <span>iOS &amp; Android Cross-Platform</span>
+          </div>
+          <h2 class="text-3xl font-extrabold font-heading text-white">4. Native &amp; Hybrid Mobile Applications</h2>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            We build native-performance mobile applications using Flutter and React Native. From biometric login (FaceID/Fingerprint) and offline data caching to Google Play &amp; Apple App Store compliance.
+          </p>
+          <div class="space-y-3 pt-2">
+            <h4 class="text-xs font-mono uppercase tracking-wider text-banana-400">Core Deliverables &amp; Features:</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-300">
+              <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+                <strong class="text-white block mb-1">Unified Codebase (iOS + Android)</strong>
+                One clean architecture delivering smooth 60fps animations across both platforms.
+              </div>
+              <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+                <strong class="text-white block mb-1">Push Notifications &amp; In-App Chat</strong>
+                Automated segmented push alerts via Firebase Cloud Messaging and WebSockets.
+              </div>
+              <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+                <strong class="text-white block mb-1">Offline-First Synchronization</strong>
+                Full database access offline with background sync once the internet reconnects.
+              </div>
+              <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+                <strong class="text-white block mb-1">Store Publishing &amp; Maintenance</strong>
+                We handle the complete Apple Developer &amp; Google Play Console approval pipeline.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-5 bg-slate-950 p-6 rounded-2xl border border-slate-800 space-y-4">
+          <h4 class="text-xs font-mono text-sky-400 font-bold uppercase">Mobile Frameworks</h4>
+          <ul class="text-xs space-y-2 text-slate-400 font-mono">
+            <li>• Flutter 3.x with Dart</li>
+            <li>• React Native / Expo</li>
+            <li>• Supabase Realtime &amp; SQLite</li>
+            <li>• Cloudflare Workers Mobile Gateway</li>
+          </ul>
+          <div class="pt-4 border-t border-slate-800">
+            <a href="contact.html?service=mobileapp" class="w-full py-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-xs uppercase tracking-wider flex items-center justify-center space-x-2 transition-all">
+              <span>Discuss Mobile App Scope</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service 5: SaaS & Custom Product Studio -->
+    <div id="products" class="glass-panel p-8 sm:p-12 rounded-3xl border border-banana-400/30 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7 space-y-4">
+          <div class="inline-flex items-center space-x-2 px-3 py-1 rounded bg-banana-400/10 text-banana-400 text-xs font-bold border border-banana-400/20">
+            <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+            <span>Rapid MVP to Scalable Platform</span>
+          </div>
+          <h2 class="text-3xl font-extrabold font-heading text-white">5. Custom Web Applications &amp; SaaS Products</h2>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Need custom business software, a specialized customer portal, or a software-as-a-service (SaaS) MVP? BananaTech takes you from discovery wireframes to production software in 4 to 6 weeks.
+          </p>
+          <div class="space-y-3 pt-2">
+            <h4 class="text-xs font-mono uppercase tracking-wider text-banana-400">Core Deliverables &amp; Features:</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-300">
+              <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+                <strong class="text-white block mb-1">Full-Stack Cloud Architecture</strong>
+                Robust PostgreSQL / Supabase databases with edge functions and Redis caching.
+              </div>
+              <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+                <strong class="text-white block mb-1">Multi-Tenant Authentication</strong>
+                Role-based access controls (RBAC), team workspaces, and SSO readiness.
+              </div>
+              <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+                <strong class="text-white block mb-1">Billing &amp; Subscription Engine</strong>
+                Stripe &amp; Razorpay webhooks, automated metered billing, and GST invoices.
+              </div>
+              <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+                <strong class="text-white block mb-1">Interactive Analytics Dashboards</strong>
+                Real-time data visualization with chart filters, CSV exports, and telemetry.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-5 bg-slate-950 p-6 rounded-2xl border border-slate-800 space-y-4">
+          <h4 class="text-xs font-mono text-banana-400 font-bold uppercase">Sprint Schedule</h4>
+          <div class="text-xs space-y-2 text-slate-300">
+            <p><strong>Week 1:</strong> Architecture &amp; UI/UX Wireframes</p>
+            <p><strong>Week 2-3:</strong> Core Engine &amp; DB Development</p>
+            <p><strong>Week 4:</strong> Integration, QA &amp; Edge Deployment</p>
+          </div>
+          <div class="pt-4 border-t border-slate-800">
+            <a href="contact.html?service=saas" class="w-full py-3 rounded-xl bg-banana-400 hover:bg-banana-300 text-slate-950 font-bold text-xs uppercase tracking-wider flex items-center justify-center space-x-2 transition-all">
+              <span>Start Product Sprint</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-[#05070D] border-t border-white/10 py-12 text-slate-400 text-xs text-center">
+    <div class="max-w-7xl mx-auto px-4">
+      <p>&copy; 2026 BananaTech (bananatech.in). All rights reserved. Hosted on Cloudflare Pages.</p>
+    </div>
+  </footer>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

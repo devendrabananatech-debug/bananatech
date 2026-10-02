@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="bananaFavicon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE047" />
+      <stop offset="50%" stop-color="#EAB308" />
+      <stop offset="100%" stop-color="#CA8A04" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#090D16" />
+  <rect x="1" y="1" width="62" height="62" rx="15" stroke="#FACC15" stroke-opacity="0.3" stroke-width="1.5" />
+  <circle cx="32" cy="32" r="26" stroke="#FACC15" stroke-width="1" stroke-dasharray="3 3" opacity="0.3"/>
+  <path d="M 22 17 C 38 20 45 35 37 47 C 35 50 31 52 28 52 C 27 52 28 48 31 44 C 36 35 30 23 18 19 C 16 18.5 18 17 22 17 Z" 
+        fill="url(#bananaFavicon)"/>
+  <circle cx="37" cy="24" r="3.5" fill="#38BDF8"/>
+  <path d="M37 24 L44 18" stroke="#38BDF8" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="44" cy="18" r="2" fill="#FFFFFF"/>
+</svg>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &amp; Book Discovery Call | BananaTech (bananatech.in)</title>
+  <meta name="description" content="Get in touch with BananaTech to discuss your hospital portal, restaurant ordering system, executive profile, or custom mobile application.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            banana: { 400: '#FACC15', 500: '#EAB308' },
+            cyanAccent: '#38BDF8',
+            emeraldAccent: '#10B981',
+          },
+          fontFamily: {
+            heading: ['Outfit', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-[#070A11] text-slate-100 selection:bg-banana-400 selection:text-slate-950 font-sans antialiased">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 backdrop-blur-xl bg-[#070A11]/85 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center">
+        <img src="assets/images/logo.svg" alt="BananaTech" class="h-10 w-auto">
+      </a>
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+        <a href="index.html" class="hover:text-banana-400 transition-colors">Home</a>
+        <a href="services.html" class="hover:text-banana-400 transition-colors">Services</a>
+        <a href="portfolio.html" class="hover:text-banana-400 transition-colors">Case Studies</a>
+        <a href="index.html#calculator" class="hover:text-banana-400 transition-colors">Cost Estimator</a>
+        <a href="about.html" class="hover:text-banana-400 transition-colors">About Us</a>
+        <a href="contact.html" class="text-banana-400 font-semibold transition-colors">Contact</a>
+      </nav>
+      <div class="flex items-center space-x-4">
+        <a href="https://wa.me/919999999999" target="_blank" class="px-4 py-2 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold hover:bg-emerald-500/20 transition-all flex items-center space-x-2">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>Direct WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="py-20 relative bg-radial-hero cyber-grid min-h-[85vh]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-banana-400/10 text-banana-400 border border-banana-400/20">
+          Get Started
+        </span>
+        <h1 class="mt-4 text-4xl sm:text-5xl font-extrabold font-heading text-white">
+          Let’s Engineer Your Next Milestone
+        </h1>
+        <p class="mt-3 text-slate-400 text-sm sm:text-base">
+          Fill out the brief below or send us a WhatsApp message directly. We reply in under 4 hours with an actionable roadmap.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        
+        <!-- Left: Details -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-white/10 space-y-6">
+            <h3 class="text-xl font-bold font-heading text-white">BananaTech Studio</h3>
+            
+            <div class="space-y-4 text-xs text-slate-300">
+              <div class="flex items-start space-x-3">
+                <i data-lucide="mail" class="w-5 h-5 text-banana-400 flex-shrink-0 mt-0.5"></i>
+                <div>
+                  <strong class="text-white block">Email</strong>
+                  <a href="mailto:contact@bananatech.in" class="hover:underline text-slate-400">contact@bananatech.in</a>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-3">
+                <i data-lucide="message-circle" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                <div>
+                  <strong class="text-white block">WhatsApp Direct Lead Desk</strong>
+                  <a href="https://wa.me/919999999999" target="_blank" class="hover:underline text-slate-400">+91 99999 99999</a>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-3">
+                <i data-lucide="shield-check" class="w-5 h-5 text-sky-400 flex-shrink-0 mt-0.5"></i>
+                <div>
+                  <strong class="text-white block">Hosting Standard</strong>
+                  <span class="text-slate-400">Cloudflare Enterprise Edge (100% Free Tier Setup)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 text-[11px] text-slate-400">
+              💡 <strong>Prefer a quick call?</strong> Tap the WhatsApp button or leave your phone number and we’ll schedule a 15-minute scoping call at your convenience.
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Inquiry Form -->
+        <div class="lg:col-span-7">
+          <div class="glass-panel p-8 sm:p-10 rounded-3xl border border-white/10 shadow-2xl">
+            <div id="form-feedback" class="hidden mb-6 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs flex items-center space-x-3">
+              <i data-lucide="check-circle" class="w-5 h-5 flex-shrink-0"></i>
+              <span>Your request has been dispatched! We will contact you within 4 hours.</span>
+            </div>
+
+            <form id="consultation-form" class="space-y-5">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label class="block text-xs font-mono uppercase tracking-wider text-slate-400 mb-2">Your Name *</label>
+                  <input id="client-name" type="text" required placeholder="Dr. Rahul Verma / Priya Singh" 
+                         class="w-full bg-slate-900 border border-slate-700/80 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-banana-400 transition-colors">
+                </div>
+                <div>
+                  <label class="block text-xs font-mono uppercase tracking-wider text-slate-400 mb-2">Email Address *</label>
+                  <input id="client-email" type="email" required placeholder="you@company.com" 
+                         class="w-full bg-slate-900 border border-slate-700/80 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-banana-400 transition-colors">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label class="block text-xs font-mono uppercase tracking-wider text-slate-400 mb-2">Phone / WhatsApp Number *</label>
+                  <input id="client-phone" type="tel" required placeholder="+91 98765 43210" 
+                         class="w-full bg-slate-900 border border-slate-700/80 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-banana-400 transition-colors">
+                </div>
+                <div>
+                  <label class="block text-xs font-mono uppercase tracking-wider text-slate-400 mb-2">Project Category *</label>
+                  <select id="client-service" class="w-full bg-slate-900 border border-slate-700/80 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-banana-400 transition-colors">
+                    <option value="Hospital Website & Portal">Hospital Website &amp; Portal (HIPAA/NABH)</option>
+                    <option value="Restaurant QR & Ordering">Restaurant Website &amp; QR Ordering System</option>
+                    <option value="Executive & Brand Profiling">Executive &amp; VIP Brand Profiling</option>
+                    <option value="Custom SaaS Product">Custom SaaS Web Application MVP</option>
+                    <option value="Mobile App (iOS/Android)">Mobile App (iOS &amp; Android Flutter/React Native)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-mono uppercase tracking-wider text-slate-400 mb-2">Approximate Budget</label>
+                <select id="client-budget" class="w-full bg-slate-900 border border-slate-700/80 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-banana-400 transition-colors">
+                  <option value="₹30,000 - ₹60,000">₹30,000 - ₹60,000 (Starter / Single Outlet / Profile)</option>
+                  <option value="₹60,000 - ₹1,20,000">₹60,000 - ₹1,20,000 (Hospital Portal / Custom FoodTech)</option>
+                  <option value="₹1,20,000 - ₹2,50,000">₹1,20,000 - ₹2,50,000 (Mobile App / Full SaaS MVP)</option>
+                  <option value="₹2,50,000+">₹2,50,000+ (Multi-Branch / Enterprise Platform)</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-xs font-mono uppercase tracking-wider text-slate-400 mb-2">Project Details &amp; Timeline</label>
+                <textarea id="client-notes" rows="4" placeholder="Briefly describe your requirements, current website (if any), and desired launch date..." 
+                          class="w-full bg-slate-900 border border-slate-700/80 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-banana-400 transition-colors"></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-banana-400 via-amber-400 to-amber-500 text-slate-950 font-extrabold text-sm uppercase tracking-wider hover:shadow-xl hover:shadow-banana-400/25 transition-all">
+                Submit Consultation Request &rarr;
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#05070D] border-t border-white/10 py-12 text-slate-400 text-xs text-center">
+    <div class="max-w-7xl mx-auto px-4">
+      <p>&copy; 2026 BananaTech (bananatech.in). All rights reserved. Hosted on Cloudflare Pages.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    lucide.createIcons();
+    // Auto-select dropdown if query param is set
+    const urlParams = new URLSearchParams(window.location.search);
+    const serviceParam = urlParams.get('service');
+    if (serviceParam) {
+      const select = document.getElementById('client-service');
+      if (serviceParam === 'hospital') select.value = 'Hospital Website & Portal';
+      else if (serviceParam === 'restaurant') select.value = 'Restaurant QR & Ordering';
+      else if (serviceParam === 'profiling') select.value = 'Executive & Brand Profiling';
+      else if (serviceParam === 'mobileapp') select.value = 'Mobile App (iOS/Android)';
+      else if (serviceParam === 'saas') select.value = 'Custom SaaS Product';
+    }
+  </script>
+</body>
+</html>
