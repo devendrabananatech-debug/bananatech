@@ -82,12 +82,17 @@ function initLeadForm() {
 
     const name = document.getElementById('client-name')?.value.trim();
     const email = document.getElementById('client-email')?.value.trim();
-    const phone = document.getElementById('client-phone')?.value.trim() || 'Not provided';
+    const phone = document.getElementById('client-phone')?.value.trim();
     const service = document.getElementById('client-service')?.value || 'General Consultation';
     const notes = document.getElementById('client-notes')?.value.trim() || 'No project details provided.';
 
-    if (!name || !email) {
-      showToast('Please provide your name and email address.', 'error');
+    if (!name) {
+      showToast('Please provide your name.', 'error');
+      return;
+    }
+
+    if (!email && !phone) {
+      showToast('Please provide at least a phone number or email address so we can reach you.', 'error');
       return;
     }
 
@@ -103,22 +108,30 @@ function initLeadForm() {
     `;
 
     try {
+      const payload = {
+        access_key: 'a82ff7c6-55b6-4ef8-8dc8-87c9f1a583c3',
+        subject: `New Lead: ${name} (${service}) - BananaTech`,
+        from_name: 'BananaTech Website',
+        name: name,
+        phone: phone || 'Not provided',
+        service_requested: service,
+        message: notes
+      };
+
+      if (email) {
+        payload.email = email;
+      } else {
+        payload.email = 'inquiry@bananatech.in';
+        payload.provided_email = 'Not provided (Client provided Phone only)';
+      }
+
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
-        body: JSON.stringify({
-          access_key: 'a82ff7c6-55b6-4ef8-8dc8-87c9f1a583c3',
-          subject: `New Lead: ${name} (${service}) - BananaTech`,
-          from_name: 'BananaTech Website',
-          name: name,
-          email: email,
-          phone: phone,
-          service_requested: service,
-          message: notes
-        })
+        body: JSON.stringify(payload)
       });
 
       const data = await response.json();
@@ -129,42 +142,28 @@ function initLeadForm() {
         if (feedbackMsg) {
           feedbackMsg.innerHTML = `
             <i data-lucide="check-circle" class="w-4 h-4 flex-shrink-0 text-emerald-400"></i>
-            <span>Thank you, <strong>${name}</strong>! Your inquiry has been sent to our team. We'll be in touch shortly.</span>
+            <span>Thank you, <strong>${name}</strong>! Your inquiry has been received. Our team will review your project brief and get in touch with you shortly.</span>
           `;
           feedbackMsg.classList.remove('hidden');
           feedbackMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
           if (window.lucide) lucide.createIcons();
         }
 
-        showToast(`Inquiry sent successfully! We will contact you soon.`, 'success');
-
-        // Optional WhatsApp fast-track
-        const waText = `Hi BananaTech Team! 👋 I just submitted a project brief on bananatech.in:\n\n• Name: ${name}\n• Service: ${service}\n• Phone: ${phone}\n• Brief: ${notes}`;
-        const waUrl = `https://wa.me/917995332333?text=${encodeURIComponent(waText)}`;
-        
-        setTimeout(() => {
-          if (confirm("Inquiry sent successfully! Would you also like to start a direct chat on WhatsApp?")) {
-            window.open(waUrl, '_blank');
-          }
-        }, 500);
+        showToast(`Inquiry sent successfully! We will contact you shortly.`, 'success');
       } else {
         throw new Error(data.message || 'Web3Forms dispatch error');
       }
     } catch (err) {
-      console.warn('Web3Forms dispatch error, routing to fallback:', err);
-      // Fallback: Ensure lead is never lost
+      console.error('Submission error:', err);
       if (feedbackMsg) {
         feedbackMsg.innerHTML = `
-          <i data-lucide="check-circle" class="w-4 h-4 flex-shrink-0 text-emerald-400"></i>
-          <span>Inquiry received! Connecting you with our direct WhatsApp desk...</span>
+          <i data-lucide="alert-circle" class="w-4 h-4 flex-shrink-0 text-amber-400"></i>
+          <span>There was an issue sending your inquiry online. Please reach out to us at <strong>admin@bananatech.in</strong> or call <strong>+91 79953 32333</strong>.</span>
         `;
         feedbackMsg.classList.remove('hidden');
         if (window.lucide) lucide.createIcons();
       }
-      showToast(`Connecting to WhatsApp desk...`, 'info');
-      const waText = `Hi BananaTech! 👋 Project inquiry from ${name} (${email}): ${service}. Notes: ${notes}`;
-      window.open(`https://wa.me/917995332333?text=${encodeURIComponent(waText)}`, '_blank');
-      form.reset();
+      showToast(`Unable to dispatch inquiry. Please contact us directly.`, 'error');
     } finally {
       submitBtn.disabled = false;
       submitBtn.innerHTML = originalText;
