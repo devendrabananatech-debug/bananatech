@@ -116,7 +116,7 @@ function initLeadForm() {
 
       // WhatsApp connection option
       const waText = `Hi BananaTech Team! 👋 I'm interested in discussing a project:\n\n• Name: ${name}\n• Service: ${service}\n• Phone: ${phone}\n• Notes: ${notes || 'Looking forward to hearing from you.'}`;
-      const waUrl = `https://wa.me/919999999999?text=${encodeURIComponent(waText)}`;
+      const waUrl = `https://wa.me/917981160755?text=${encodeURIComponent(waText)}`;
       
       const promptWa = confirm("Inquiry received! Would you like to connect directly on WhatsApp with BananaTech?");
       if (promptWa) {
