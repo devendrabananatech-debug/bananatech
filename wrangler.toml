@@ -1,9 +1,4 @@
-# Cloudflare Configuration for BananaTech
+# Cloudflare Pages Configuration for BananaTech
 name = "bananatech"
 compatibility_date = "2024-09-23"
-
-# For Cloudflare Pages
 pages_build_output_dir = "."
-
-# For Cloudflare Workers Static Assets (enables 'npx wrangler deploy')
-assets = { directory = "." }
