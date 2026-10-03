@@ -15,32 +15,61 @@ document.addEventListener('DOMContentLoaded', () => {
 function initMobileMenu() {
   const menuBtn = document.getElementById('mobile-menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
-  const closeBtn = document.getElementById('mobile-menu-close');
   const mobileLinks = document.querySelectorAll('.mobile-nav-link');
 
   if (!menuBtn || !mobileMenu) return;
 
-  function toggleMenu(show) {
-    if (show) {
+  let isOpen = false;
+
+  function toggleMenu(forceState) {
+    isOpen = (typeof forceState === 'boolean') ? forceState : !isOpen;
+
+    if (isOpen) {
       mobileMenu.classList.remove('hidden');
-      setTimeout(() => {
-        mobileMenu.classList.remove('opacity-0', '-translate-y-4');
+      document.body.style.overflow = 'hidden';
+      menuBtn.setAttribute('aria-expanded', 'true');
+      menuBtn.innerHTML = '<i data-lucide="x" class="w-6 h-6 text-white"></i>';
+      if (window.lucide) lucide.createIcons();
+
+      requestAnimationFrame(() => {
+        mobileMenu.classList.remove('opacity-0', '-translate-y-2');
         mobileMenu.classList.add('opacity-100', 'translate-y-0');
-      }, 10);
+      });
     } else {
+      document.body.style.overflow = '';
+      menuBtn.setAttribute('aria-expanded', 'false');
+      menuBtn.innerHTML = '<i data-lucide="menu" class="w-6 h-6 text-slate-300"></i>';
+      if (window.lucide) lucide.createIcons();
+
       mobileMenu.classList.remove('opacity-100', 'translate-y-0');
-      mobileMenu.classList.add('opacity-0', '-translate-y-4');
+      mobileMenu.classList.add('opacity-0', '-translate-y-2');
       setTimeout(() => {
-        mobileMenu.classList.add('hidden');
+        if (!isOpen) mobileMenu.classList.add('hidden');
       }, 200);
     }
   }
 
-  menuBtn.addEventListener('click', () => toggleMenu(true));
-  if (closeBtn) closeBtn.addEventListener('click', () => toggleMenu(false));
+  menuBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleMenu();
+  });
 
   mobileLinks.forEach(link => {
     link.addEventListener('click', () => toggleMenu(false));
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (isOpen && !mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+      toggleMenu(false);
+    }
+  });
+
+  // Close menu on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && isOpen) {
+      toggleMenu(false);
+    }
   });
 }
 
