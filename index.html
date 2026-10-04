@@ -201,7 +201,7 @@
 
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="stylesheet" href="assets/css/styles.css?v=2.4">
+  <link rel="stylesheet" href="assets/css/styles.css?v=2.5">
 </head>
 <body class="bg-[#070A11] text-slate-100 selection:bg-banana-400 selection:text-slate-950 font-sans antialiased">
 
@@ -219,7 +219,7 @@
         <a href="#services" class="hover:text-banana-400 transition-colors">Services</a>
         <a href="#projects" class="hover:text-banana-400 transition-colors flex items-center space-x-1.5">
           <span>Projects</span>
-          <span class="px-1.5 py-0.5 text-[10px] rounded-full bg-banana-400/20 text-banana-400 font-mono font-bold">2 Live</span>
+          <span class="px-1.5 py-0.5 text-[10px] rounded-full bg-banana-400/20 text-banana-400 font-mono font-bold">3 Projects</span>
         </a>
         <a href="#capabilities" class="hover:text-banana-400 transition-colors">Capabilities</a>
         <a href="#process" class="hover:text-banana-400 transition-colors">Process</a>
@@ -263,7 +263,7 @@
           <a href="#projects" class="mobile-nav-link mobile-nav-link-card flex items-center justify-between px-4 py-3.5 rounded-xl text-slate-200 hover:text-white transition-all border-l-2 border-l-banana-400">
             <span class="font-medium text-sm flex items-center space-x-2">
               <span>Featured Projects</span>
-              <span class="px-2 py-0.5 text-[10px] rounded-full bg-banana-400/20 text-banana-400 font-mono font-bold">2 Live</span>
+              <span class="px-2 py-0.5 text-[10px] rounded-full bg-banana-400/20 text-banana-400 font-mono font-bold">2 Live • 1 Upcoming</span>
             </span>
             <i data-lucide="chevron-right" class="w-4 h-4 text-banana-400"></i>
           </a>
@@ -509,179 +509,279 @@
 
   <!-- Selected Work & Live Deployments (Projects) -->
   <section id="projects" class="py-24 relative bg-[#070A11] border-b border-white/5">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Section Header -->
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <div class="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-banana-400/10 text-banana-400 border border-banana-400/20 mb-4">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-banana-400/10 text-banana-400 border border-banana-400/20 mb-4">
           <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          <span>Selected Projects &amp; Live Client Work</span>
+          <span>Client Portfolio &amp; Active Deployments</span>
         </div>
-        <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-white">
           Digital Platforms Built for Market Leaders
         </h2>
-        <p class="mt-3 text-slate-400 text-sm sm:text-base">
-          Explore real-world production platforms designed, engineered, and deployed by the BananaTech studio.
+        <p class="mt-4 text-slate-400 text-sm sm:text-base leading-relaxed">
+          From luxury real estate infrastructure to specialized medical healthcare portals, explore real-world production platforms designed, engineered, and deployed by BananaTech.
         </p>
       </div>
 
-      <!-- Projects Grid -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <!-- 3-Column Projects Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
         <!-- Project 1: Deccan Homes -->
-        <div class="glass-panel rounded-3xl border border-white/10 hover:border-banana-400/40 transition-all duration-300 overflow-hidden flex flex-col justify-between group">
-          <div class="p-7 sm:p-9">
-            
-            <!-- Browser Mockup Window Header -->
-            <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-800">
-              <div class="flex items-center space-x-2">
-                <span class="w-3 h-3 rounded-full bg-rose-500/80 inline-block"></span>
-                <span class="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
-                <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
-                <span class="ml-2 text-xs font-mono text-slate-400 flex items-center space-x-1">
-                  <i data-lucide="lock" class="w-3 h-3 text-emerald-400"></i>
-                  <span>deccanhomes.in</span>
+        <div class="glass-panel rounded-3xl border border-white/10 hover:border-banana-400/50 transition-all duration-300 overflow-hidden flex flex-col justify-between group shadow-xl">
+          <div>
+            <!-- Visual Photo Card with Browser Frame -->
+            <div class="relative bg-slate-950 border-b border-white/10">
+              <div class="px-4 py-2.5 bg-slate-900/90 border-b border-white/5 flex items-center justify-between">
+                <div class="flex items-center space-x-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-rose-500/80 inline-block"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-500/80 inline-block"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80 inline-block"></span>
+                  <span class="ml-2 px-2 py-0.5 rounded-md bg-slate-950/70 border border-white/5 text-[10px] font-mono text-slate-400 flex items-center space-x-1">
+                    <i data-lucide="lock" class="w-3 h-3 text-emerald-400"></i>
+                    <span>deccanhomes.in</span>
+                  </span>
+                </div>
+                <span class="inline-flex items-center space-x-1.5 px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/25">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                  <span>Live Site</span>
                 </span>
               </div>
-              <span class="inline-flex items-center space-x-1.5 px-2.5 py-1 rounded-full text-[11px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                <span>Live in Production</span>
-              </span>
+              <div class="relative aspect-video overflow-hidden bg-slate-900">
+                <img src="assets/images/project-deccanhomes.jpg" alt="Deccan Homes Luxury Real Estate Platform Preview" 
+                     class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent"></div>
+              </div>
             </div>
 
-            <!-- Content Header -->
-            <div class="mb-4">
-              <div class="flex items-center space-x-3 mb-2">
-                <div class="w-10 h-10 rounded-xl bg-amber-400/10 border border-amber-400/20 flex items-center justify-center text-banana-400">
-                  <i data-lucide="home" class="w-5 h-5"></i>
+            <!-- Content Area -->
+            <div class="p-6 sm:p-7">
+              <div class="flex items-center space-x-3 mb-2.5">
+                <div class="w-9 h-9 rounded-xl bg-amber-400/10 border border-amber-400/20 flex items-center justify-center text-banana-400">
+                  <i data-lucide="home" class="w-4 h-4"></i>
                 </div>
                 <div>
-                  <h3 class="text-2xl font-bold font-heading text-white group-hover:text-banana-400 transition-colors">
+                  <h3 class="text-xl font-bold font-heading text-white group-hover:text-banana-400 transition-colors">
                     Deccan Homes
                   </h3>
-                  <p class="text-xs font-mono text-banana-400">deccanhomes.in</p>
+                  <p class="text-[11px] font-mono text-banana-400">deccanhomes.in</p>
                 </div>
               </div>
-              <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">
-                Premium Real Estate &amp; Residential Villa Platform
+
+              <p class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-2.5">
+                Luxury Real Estate &amp; Residential Villa Platform
               </p>
-              <p class="text-slate-300 text-sm leading-relaxed">
-                A high-performance digital real estate platform engineered for luxury gated communities and residential villas. Built with responsive property visualizers, interactive location mapping, and an integrated high-conversion lead generation architecture.
+              <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                A high-performance digital showcase for luxury gated communities and residential villas. Built with responsive property visualizers and direct WhatsApp lead funnels.
               </p>
-            </div>
 
-            <!-- Deliverables & Highlights -->
-            <div class="space-y-2 py-4 border-t border-b border-slate-800/80 my-5 text-xs text-slate-300">
-              <div class="flex items-center space-x-2">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-banana-400 flex-shrink-0"></i>
-                <span>Interactive luxury villa showcases &amp; floorplan visualizers</span>
+              <!-- Deliverable Highlights -->
+              <div class="space-y-1.5 py-3 border-t border-b border-slate-800/80 mb-4 text-xs text-slate-300">
+                <div class="flex items-center space-x-2">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-banana-400 flex-shrink-0"></i>
+                  <span>Luxury villa showcases &amp; floorplans</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-banana-400 flex-shrink-0"></i>
+                  <span>Direct lead funnels &amp; site booking</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-banana-400 flex-shrink-0"></i>
+                  <span>Sub-second global edge CDN speed</span>
+                </div>
               </div>
-              <div class="flex items-center space-x-2">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-banana-400 flex-shrink-0"></i>
-                <span>Direct WhatsApp &amp; site visit lead capture workflows</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-banana-400 flex-shrink-0"></i>
-                <span>Zero-bloat edge CDN deployment for sub-second page loads</span>
+
+              <!-- Tech Badges -->
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300">Web Platform</span>
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300">Edge CDN</span>
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300">Lead Funnels</span>
               </div>
             </div>
-
-            <!-- Tech Badges -->
-            <div class="flex flex-wrap gap-2 pt-1">
-              <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-slate-900 border border-slate-800 text-slate-300">Web Platform</span>
-              <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-slate-900 border border-slate-800 text-slate-300">Edge Architecture</span>
-              <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-slate-900 border border-slate-800 text-slate-300">Lead Funnels</span>
-              <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-slate-900 border border-slate-800 text-slate-300">Mobile Responsive</span>
-            </div>
-
           </div>
 
-          <!-- Action Footer -->
-          <div class="px-7 sm:px-9 py-5 bg-slate-950/80 border-t border-slate-800 flex items-center justify-between">
-            <span class="text-xs text-slate-400">Deployed by BananaTech</span>
+          <!-- Card Action Footer -->
+          <div class="px-6 py-4 bg-slate-950/90 border-t border-slate-800 flex items-center justify-between">
+            <span class="text-[11px] font-mono text-slate-400">Deployed by BananaTech</span>
             <a href="https://deccanhomes.in/" target="_blank" rel="noopener noreferrer" 
-               class="inline-flex items-center space-x-2 px-4 py-2 rounded-xl bg-banana-400 text-slate-950 font-bold text-xs uppercase tracking-wider hover:bg-banana-300 transition-all shadow-md hover:shadow-banana-400/20">
-              <span>Visit Website</span>
-              <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+               class="inline-flex items-center space-x-1.5 px-3.5 py-1.5 rounded-lg bg-banana-400 text-slate-950 font-bold text-xs uppercase tracking-wider hover:bg-banana-300 transition-all shadow-md">
+              <span>Visit Site</span>
+              <i data-lucide="external-link" class="w-3 h-3"></i>
             </a>
           </div>
         </div>
 
         <!-- Project 2: Adhiti Infra -->
-        <div class="glass-panel rounded-3xl border border-white/10 hover:border-sky-400/40 transition-all duration-300 overflow-hidden flex flex-col justify-between group">
-          <div class="p-7 sm:p-9">
-            
-            <!-- Browser Mockup Window Header -->
-            <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-800">
-              <div class="flex items-center space-x-2">
-                <span class="w-3 h-3 rounded-full bg-rose-500/80 inline-block"></span>
-                <span class="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
-                <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
-                <span class="ml-2 text-xs font-mono text-slate-400 flex items-center space-x-1">
-                  <i data-lucide="lock" class="w-3 h-3 text-emerald-400"></i>
-                  <span>adhitiinfra.com</span>
+        <div class="glass-panel rounded-3xl border border-white/10 hover:border-sky-400/50 transition-all duration-300 overflow-hidden flex flex-col justify-between group shadow-xl">
+          <div>
+            <!-- Visual Photo Card with Browser Frame -->
+            <div class="relative bg-slate-950 border-b border-white/10">
+              <div class="px-4 py-2.5 bg-slate-900/90 border-b border-white/5 flex items-center justify-between">
+                <div class="flex items-center space-x-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-rose-500/80 inline-block"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-500/80 inline-block"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80 inline-block"></span>
+                  <span class="ml-2 px-2 py-0.5 rounded-md bg-slate-950/70 border border-white/5 text-[10px] font-mono text-slate-400 flex items-center space-x-1">
+                    <i data-lucide="lock" class="w-3 h-3 text-emerald-400"></i>
+                    <span>adhitiinfra.com</span>
+                  </span>
+                </div>
+                <span class="inline-flex items-center space-x-1.5 px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/25">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                  <span>Live Site</span>
                 </span>
               </div>
-              <span class="inline-flex items-center space-x-1.5 px-2.5 py-1 rounded-full text-[11px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                <span>Live in Production</span>
-              </span>
+              <div class="relative aspect-video overflow-hidden bg-slate-900">
+                <img src="assets/images/project-adhitiinfra.jpg" alt="Adhiti Infra Infrastructure Platform Preview" 
+                     class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent"></div>
+              </div>
             </div>
 
-            <!-- Content Header -->
-            <div class="mb-4">
-              <div class="flex items-center space-x-3 mb-2">
-                <div class="w-10 h-10 rounded-xl bg-sky-400/10 border border-sky-400/20 flex items-center justify-center text-sky-400">
-                  <i data-lucide="building-2" class="w-5 h-5"></i>
+            <!-- Content Area -->
+            <div class="p-6 sm:p-7">
+              <div class="flex items-center space-x-3 mb-2.5">
+                <div class="w-9 h-9 rounded-xl bg-sky-400/10 border border-sky-400/20 flex items-center justify-center text-sky-400">
+                  <i data-lucide="building-2" class="w-4 h-4"></i>
                 </div>
                 <div>
-                  <h3 class="text-2xl font-bold font-heading text-white group-hover:text-sky-400 transition-colors">
+                  <h3 class="text-xl font-bold font-heading text-white group-hover:text-sky-400 transition-colors">
                     Adhiti Infra
                   </h3>
-                  <p class="text-xs font-mono text-sky-400">adhitiinfra.com</p>
+                  <p class="text-[11px] font-mono text-sky-400">adhitiinfra.com</p>
                 </div>
               </div>
-              <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">
+
+              <p class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-2.5">
                 Real Estate Collective &amp; Infrastructure Platform
               </p>
-              <p class="text-slate-300 text-sm leading-relaxed">
-                A modern digital presence engineered for a premier real estate collective in Andhra Pradesh &amp; Telangana. Highlights plotted community developments, transparent investment disclosures, and bespoke advisory scheduling.
+              <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                Corporate digital experience engineered for a premier real estate collective in AP &amp; Telangana. Highlights plotted communities, master plans, and advisory booking.
               </p>
-            </div>
 
-            <!-- Deliverables & Highlights -->
-            <div class="space-y-2 py-4 border-t border-b border-slate-800/80 my-5 text-xs text-slate-300">
-              <div class="flex items-center space-x-2">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-400 flex-shrink-0"></i>
-                <span>Plotted community visualizer &amp; master plan disclosures</span>
+              <!-- Deliverable Highlights -->
+              <div class="space-y-1.5 py-3 border-t border-b border-slate-800/80 mb-4 text-xs text-slate-300">
+                <div class="flex items-center space-x-2">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-sky-400 flex-shrink-0"></i>
+                  <span>Plotted community visualizers &amp; maps</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-sky-400 flex-shrink-0"></i>
+                  <span>Site visit &amp; advisory booking system</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-sky-400 flex-shrink-0"></i>
+                  <span>Search engine authority tagging &amp; SEO</span>
+                </div>
               </div>
-              <div class="flex items-center space-x-2">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-400 flex-shrink-0"></i>
-                <span>Direct Advisory site visit &amp; investment appointment system</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-400 flex-shrink-0"></i>
-                <span>Pristine Core Web Vitals with search engine authority tagging</span>
+
+              <!-- Tech Badges -->
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300">Corporate UI</span>
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300">Advisory Portal</span>
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300">Speed 100/100</span>
               </div>
             </div>
-
-            <!-- Tech Badges -->
-            <div class="flex flex-wrap gap-2 pt-1">
-              <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-slate-900 border border-slate-800 text-slate-300">Corporate Portal</span>
-              <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-slate-900 border border-slate-800 text-slate-300">Cloud Architecture</span>
-              <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-slate-900 border border-slate-800 text-slate-300">Advisory Booking</span>
-              <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-slate-900 border border-slate-800 text-slate-300">Speed Optimization</span>
-            </div>
-
           </div>
 
-          <!-- Action Footer -->
-          <div class="px-7 sm:px-9 py-5 bg-slate-950/80 border-t border-slate-800 flex items-center justify-between">
-            <span class="text-xs text-slate-400">Deployed by BananaTech</span>
+          <!-- Card Action Footer -->
+          <div class="px-6 py-4 bg-slate-950/90 border-t border-slate-800 flex items-center justify-between">
+            <span class="text-[11px] font-mono text-slate-400">Deployed by BananaTech</span>
             <a href="https://adhitiinfra.com/" target="_blank" rel="noopener noreferrer" 
-               class="inline-flex items-center space-x-2 px-4 py-2 rounded-xl bg-sky-400 text-slate-950 font-bold text-xs uppercase tracking-wider hover:bg-sky-300 transition-all shadow-md hover:shadow-sky-400/20">
-              <span>Visit Website</span>
-              <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+               class="inline-flex items-center space-x-1.5 px-3.5 py-1.5 rounded-lg bg-sky-400 text-slate-950 font-bold text-xs uppercase tracking-wider hover:bg-sky-300 transition-all shadow-md">
+              <span>Visit Site</span>
+              <i data-lucide="external-link" class="w-3 h-3"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3: Nethra Eye Care (Upcoming Client) -->
+        <div class="glass-panel rounded-3xl border border-banana-400/30 hover:border-banana-400 transition-all duration-300 overflow-hidden flex flex-col justify-between group shadow-xl relative">
+          <!-- Top Feature Glow -->
+          <div class="absolute -top-10 -right-10 w-28 h-28 bg-banana-400/10 rounded-full blur-2xl pointer-events-none"></div>
+
+          <div>
+            <!-- Visual Photo Card with Browser Frame -->
+            <div class="relative bg-slate-950 border-b border-white/10">
+              <div class="px-4 py-2.5 bg-slate-900/90 border-b border-white/5 flex items-center justify-between">
+                <div class="flex items-center space-x-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-rose-500/80 inline-block"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-500/80 inline-block"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80 inline-block"></span>
+                  <span class="ml-2 px-2 py-0.5 rounded-md bg-slate-950/70 border border-white/5 text-[10px] font-mono text-slate-400 flex items-center space-x-1">
+                    <i data-lucide="lock" class="w-3 h-3 text-banana-400"></i>
+                    <span>Nethra Eye Care • Eluru, AP</span>
+                  </span>
+                </div>
+                <span class="inline-flex items-center space-x-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-banana-400/15 text-banana-400 border border-banana-400/30">
+                  <span class="w-1.5 h-1.5 rounded-full bg-banana-400 animate-ping"></span>
+                  <span>Upcoming</span>
+                </span>
+              </div>
+              <div class="relative aspect-video overflow-hidden bg-slate-900">
+                <img src="assets/images/project-nethra.jpg" alt="Nethra Eye Care Super-Specialty Hospital Platform Preview" 
+                     class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent"></div>
+              </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="p-6 sm:p-7">
+              <div class="flex items-center space-x-3 mb-2.5">
+                <div class="w-9 h-9 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
+                  <i data-lucide="activity" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold font-heading text-white group-hover:text-banana-400 transition-colors">
+                    Nethra Eye Care
+                  </h3>
+                  <p class="text-[11px] font-mono text-banana-400">Eluru, Andhra Pradesh</p>
+                </div>
+              </div>
+
+              <p class="text-[11px] font-semibold text-purple-400 uppercase tracking-wider mb-2.5">
+                Healthcare Portal &amp; Eye Hospital Platform
+              </p>
+              <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                Comprehensive digital patient portal engineered for one of coastal AP's premier ophthalmic centers. Features online doctor appointment booking and specialty eye care guides.
+              </p>
+
+              <!-- Deliverable Highlights -->
+              <div class="space-y-1.5 py-3 border-t border-b border-slate-800/80 mb-4 text-xs text-slate-300">
+                <div class="flex items-center space-x-2">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-purple-400 flex-shrink-0"></i>
+                  <span>Patient appointment booking &amp; doctors portal</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-purple-400 flex-shrink-0"></i>
+                  <span>Cataract, LASIK &amp; Retina procedure guides</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-purple-400 flex-shrink-0"></i>
+                  <span>Medical local SEO &amp; Google Knowledge Graph</span>
+                </div>
+              </div>
+
+              <!-- Tech Badges -->
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-purple-500/10 border border-purple-500/20 text-purple-300">Healthcare</span>
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300">Doctor Booking</span>
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-banana-400/15 border border-banana-400/30 text-banana-300">In Engineering</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Action Footer -->
+          <div class="px-6 py-4 bg-slate-950/90 border-t border-slate-800 flex items-center justify-between">
+            <span class="text-[11px] font-mono text-banana-400 font-semibold flex items-center space-x-1.5">
+              <span class="w-2 h-2 rounded-full bg-banana-400 animate-pulse"></span>
+              <span>Engineering in Progress</span>
+            </span>
+            <a href="https://share.google/Xzk6mrGoeNG4ZBXKr" target="_blank" rel="noopener noreferrer" 
+               class="inline-flex items-center space-x-1.5 px-3.5 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-banana-400 border border-banana-400/30 font-bold text-xs transition-all">
+              <span>Hospital Details</span>
+              <i data-lucide="external-link" class="w-3 h-3"></i>
             </a>
           </div>
         </div>
@@ -1065,7 +1165,7 @@
     </a>
   </div>
 
-  <script src="assets/js/main.js?v=2.4"></script>
+  <script src="assets/js/main.js?v=2.5"></script>
   <script>
     lucide.createIcons();
   </script>
