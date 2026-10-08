@@ -1,7 +1,7 @@
-# Clean Redirects
+# Clean Canonical Redirects
 /home                /                     301
 /portfolio           /                     301
-/services            /#services            301
-/about               /#why-us              301
-/contact             /#contact             301
+/services            /                     301
+/about               /                     301
+/contact             /                     301
 /privacy             /policy               301
