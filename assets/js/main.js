@@ -3,6 +3,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initThemeToggle();
   initMobileMenu();
   initFaqAccordion();
   initLeadForm();
@@ -251,3 +252,40 @@ function showToast(message, type = 'info') {
     setTimeout(() => toast.remove(), 300);
   }, 4000);
 }
+
+/* ----------------------------------------------------
+ * 6. Dark / Light Mode Controller
+ * -------------------------------------------------- */
+function initThemeToggle() {
+  const themeToggles = document.querySelectorAll('.theme-toggle-btn');
+  
+  function updateThemeUI() {
+    const isDark = document.documentElement.classList.contains('dark');
+    themeToggles.forEach(btn => {
+      btn.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+      btn.setAttribute('title', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+    });
+  }
+
+  function toggleTheme() {
+    const isDark = document.documentElement.classList.contains('dark');
+    if (isDark) {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    } else {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    }
+    updateThemeUI();
+  }
+
+  themeToggles.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      toggleTheme();
+    });
+  });
+
+  updateThemeUI();
+}
+

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,16 +43,32 @@
       }
     }
   </script>
+
+  <!-- Theme Initialization (Prevent FOUT) -->
+  <script>
+    (function() {
+      try {
+        var theme = localStorage.getItem('theme');
+        if (theme === 'light') {
+          document.documentElement.classList.remove('dark');
+        } else {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+
   <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css?v=2.7">
 </head>
 <body class="bg-[#070A11] text-slate-100 selection:bg-banana-400 selection:text-slate-950 font-sans antialiased">
 
   <!-- Header -->
   <header class="sticky top-0 z-40 backdrop-blur-xl bg-[#070A11]/85 border-b border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <a href="/" class="flex items-center">
-        <img src="assets/images/logo.svg" alt="BananaTech" class="h-10 w-auto">
+      <a href="/" class="flex items-center group">
+        <img src="assets/images/logo.svg" alt="BananaTech" class="h-10 w-auto group-hover:scale-105 transition-transform duration-300 hidden dark:block">
+        <img src="assets/images/logo-light.svg" alt="BananaTech" class="h-10 w-auto group-hover:scale-105 transition-transform duration-300 block dark:hidden">
       </a>
       <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
         <a href="/" class="hover:text-banana-400 transition-colors">Home</a>
@@ -62,7 +78,11 @@
         <a href="/#why-us" class="text-banana-400 font-semibold transition-colors">Why BananaTech</a>
         <a href="/#contact" class="hover:text-banana-400 transition-colors">Contact</a>
       </nav>
-      <div class="flex items-center space-x-4">
+      <div class="flex items-center space-x-3.5">
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle dark/light mode" title="Toggle dark/light mode">
+          <i data-lucide="sun" class="w-4 h-4 text-banana-400 hidden dark:block"></i>
+          <i data-lucide="moon" class="w-4 h-4 text-slate-700 block dark:hidden"></i>
+        </button>
         <a href="/#contact" class="px-5 py-2.5 rounded-lg bg-banana-400 text-slate-950 font-bold text-xs uppercase tracking-wider hover:bg-banana-300 transition-all">
           Start Project
         </a>
@@ -159,6 +179,7 @@
     </div>
   </footer>
 
+  <script src="assets/js/main.js?v=2.7"></script>
   <script>lucide.createIcons();</script>
 </body>
 </html>
